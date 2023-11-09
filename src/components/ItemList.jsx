@@ -1,15 +1,18 @@
 import Item from "./Item";
 
-const ItemList = ({ products }) => {
-
-    console.log(products);
-
+const ItemList = ({ products}) => {
     return (
         <>
             <div className="grid-container">
                 {products.map((product) => {
                     return (
-                        <Item key={product.id} title={product.title}/>
+                        <Item 
+                            key={product.id} 
+                            id={product.id}
+                            title={product.title}
+                            price={product.price}
+                            image={product.image}
+                        />
                     )
                 })}
             </div>

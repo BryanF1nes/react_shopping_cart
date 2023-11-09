@@ -26,19 +26,42 @@
 /* grid-container */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  gap: 10px;
+  grid-gap: 10px;
 }
 /* item-card */
 .item-card {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 300px;
   width: 200px;
   border: 1px solid black;
+  gap: 5px;
 }
 .item-card h2 {
   font-size: 16px;
+  text-align: center;
+  font-weight: 500;
+}
+.item-card img {
+  object-fit: contain;
+  height: 100px;
+  width: 100px;
+}
+.item-card button {
+  padding: 10px;
+  color: white;
+  background-color: crimson;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 960px)  {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

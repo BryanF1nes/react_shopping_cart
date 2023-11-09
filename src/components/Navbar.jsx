@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ cart }) => {
     return (
         <nav className="navbar">
             <div>
@@ -9,7 +9,7 @@ const Navbar = () => {
             <div className="links">
                 <Link to="/">Home</Link>
                 <Link to="/shop">Shop</Link>
-                <Link to="/cart">Cart</Link>
+                <Link to="/cart">Cart {cart.length === 0 ? '' : <span>{cart.length}</span>}</Link>
             </div>
         </nav>
     )
