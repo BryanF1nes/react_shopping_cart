@@ -5,6 +5,8 @@ const Item = ({ title, id, image, price }) => {
     const [contextProps] = useOutletContext();
     const handleAddToCart = contextProps.handleAddToCart;
 
+    // const { handleAddToCart } = useOutletContext();
+
     return (
         <div className="item-card" id={id}>
             <img src={image} alt="blank" />

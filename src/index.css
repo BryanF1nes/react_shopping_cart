@@ -38,7 +38,10 @@
   justify-content: center;
   height: 300px;
   width: 200px;
-  border: 1px solid black;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.35);
+  border-radius: 10px;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.15);
   gap: 5px;
 }
 .item-card h2 {

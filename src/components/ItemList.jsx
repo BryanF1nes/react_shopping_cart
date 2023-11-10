@@ -1,6 +1,6 @@
 import Item from "./Item";
 
-const ItemList = ({ products}) => {
+const ItemList = ({ products }) => {
     return (
         <>
             <div className="grid-container">
