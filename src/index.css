@@ -62,9 +62,20 @@
   border-radius: 5px;
   cursor: pointer;
 }
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 @media (max-width: 960px)  {
   .grid-container {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr);
   }
 }

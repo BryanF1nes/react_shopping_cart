@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { Outlet } from "react-router-dom"
 import Navbar from "./components/Navbar"
+import Footer from "./components/Footer";
 
 const App = () => {
   const [ cart, setCart ] = useState([]);
@@ -8,7 +9,7 @@ const App = () => {
     setCart([...cart, e.target.parentNode.id])
   }
   
-  const contextProps = {cart, handleAddToCart};
+  const contextProps = {cart, setCart, handleAddToCart};
 
   return (
     <div className="App">
@@ -16,6 +17,7 @@ const App = () => {
       <div className="content">
         <Outlet context={[contextProps]}/>
       </div>
+      <Footer />
     </div>
   )
 }
